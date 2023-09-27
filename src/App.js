@@ -1,17 +1,29 @@
 import './App.css';
-import {CustomTable} from './components/header/custom-table';
+import {Header} from './components/header/header';
 import {Container, Navbar} from "react-bootstrap";
+import {CustomTable} from "./components/table/custom-table";
+import {PageLayout} from "./components/layout/page-layout";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {ItemList} from "./components/pages/item-list";
+import {ItemCreate} from "./components/pages/item-create";
+import {ItemUpdate} from "./components/pages/item-update";
+import {ItemDetails} from "./components/pages/item-details";
 
 function App() {
     return (
-        <Container>
-            <Navbar expand="lg" className="bg-body-tertiary">
-                <Container>
-                    <Navbar.Brand href="/">React CC-CRUD</Navbar.Brand>
-                </Container>
-            </Navbar>
-            <CustomTable/>
-        </Container>
+        <>
+            <Header />
+            <PageLayout>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<ItemList /> } />
+                        <Route path="/new" element={<ItemCreate /> } />
+                        <Route path="/{id}/update" element={<ItemUpdate /> } />
+                        <Route path="/{id}" element={<ItemDetails /> } />
+                    </Routes>
+                </BrowserRouter>
+            </PageLayout>
+        </>
     );
 }
 

@@ -1,0 +1,20 @@
+.layoutRow {
+    > * {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .menu {
+        max-width: 314px;
+    }
+}
+
+:global {
+    .card {
+        > .list-group {
+            > .list-group-item {
+                padding: 16px;
+            }
+        }
+    }
+}
