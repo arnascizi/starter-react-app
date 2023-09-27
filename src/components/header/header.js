@@ -1,3 +1,6 @@
+import { Nav, Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 export const Header = () => {
 
     return (
@@ -9,7 +12,7 @@ export const Header = () => {
                 className="navbar-toggleable"
                 expand="md"
                 >
-                    <Navbar.Brand as={link} to="/" className="bg-dark">
+                    <Navbar.Brand to="/" className="bg-dark">
                         CC-Crud-App
                     </Navbar.Brand>
                     <Nav className="ml-3">
