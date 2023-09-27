@@ -1,24 +1,16 @@
 import './App.css';
-import {Header} from './components/header/header';
-import {Container, Navbar, Table} from "react-bootstrap";
+import {CustomTable} from './components/header/custom-table';
+import {Container, Navbar} from "react-bootstrap";
 
 function App() {
     return (
         <Container>
-            <Navbar className="bg-body-tertiary">
+            <Navbar expand="lg" className="bg-body-tertiary">
                 <Container>
-                    <Navbar.Brand href="#home">
-                        <img
-                            alt=""
-                            src="./img/logo.svg"
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top"
-                        />{' '}
-                        React Bootstrap
-                    </Navbar.Brand>
+                    <Navbar.Brand href="/">React CC-CRUD</Navbar.Brand>
                 </Container>
             </Navbar>
+            <CustomTable/>
         </Container>
     );
 }
