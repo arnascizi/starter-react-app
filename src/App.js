@@ -3,7 +3,12 @@ import { Header } from './components/header/header';
 
 function App() {
   return (
-    <Header />
+      <div className="container">
+        <Header />
+        <main className="content">
+          need to test this first
+        </main>
+      </div>
   );
 }
 
