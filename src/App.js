@@ -5,8 +5,8 @@ import {Container} from "react-bootstrap";
 function App() {
     return (
         <Container>
-            react container
-            {/*<Header />*/}
+            react container with added custom header
+            <Header />
         </Container>
     );
 }
